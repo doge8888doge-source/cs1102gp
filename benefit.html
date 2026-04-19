@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS1102 Group project</title>
+    <link rel="stylesheet" href="css/style1.css">
+    </head>
+<body>
+    
+    <header class="box">
+    <div class="header-logo">
+        <img src="image/cityulogo.png" alt="cityu logo">
+        <nav class="header-nav">
+            <ul>
+                <li><a href="index.html" >HOME</a></li>
+                <li><a href="adaption.html" >AI adaption</a></li>
+                <li><a href="benefit.html" >Benefits and Risks</a></li>
+                <li><a href="case.html" >Case Study</a></li>
+                <li><a href="quiz.html" >QUIZ</a></li>
+            </ul>
+        </nav>
+    </div>
+    </header>
+    
+   <div class="title-banner">
+        <h1>CS1102 - Course Project - 2025 / 2026 Semester B</h1>
+        <h2>Topic: AI-Driven Detection of Synthetic Identity Fraud in Consumer Lending</h2>
+    </div>
+    <main class="content">
+        <h2>Measurable benefits and evidence</h2>
+        <ul>
+            <li>Higher detection of coordinated fraud: studies and industry reports show graph approaches detect patterns that traditional systems miss; synthetic identity losses remain large, motivating graph methods. (Industry loss estimate cited: $6.8B; rule systems miss many emerging patterns.)</li>
+            <li>Faster triage: prioritized alerts (Precision@K) reduce investigator workload and time-to-action.</li>
+        </ul>
+
+        <h2>Risks, trade-offs, and mitigations</h2>
+        <ul>
+            <li>False positives and customer friction: tune thresholds; use human-in-the-loop review and explainable subgraph extracts. Calibrate by Precision@K and FPR.</li>
+            <li>Bias and fairness: ensure demographic proxies are not used as shortcuts; audit disparate FPRs and apply threshold adjustments.</li>
+            <li>Operational complexity: requires data pipelines for entity resolution and privacy-compliant data handling; start with pilot on high-risk segments.</li>
+        </ul>
+
+        <h2>Practical next steps for a lender</h2>
+        <ol>
+            <li>Assemble entity graph from recent applications and device/IP logs.</li>
+            <li>Seed labels with known fraud cases; run supervised GNN + anomaly detector.</li>
+            <li>Evaluate using Precision@K, Recall, and FPR; measure investigator workload.</li>
+            <li>Deploy hybrid scoring with human review and explainability outputs.</li>
+        </ol>
+    </main>
+</body>
+</html>

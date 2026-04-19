@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS1102 Group project</title>
+    <link rel="stylesheet" href="css/style1.css">
+    
+<style>
+.correct {
+    color: green;
+    font-weight: bold;
+}
+
+.wrong {
+    color: red;
+    font-weight: bold;
+}
+</style>
+
+    </head>
+<body>
+    
+    <header class="box">
+    <div class="header-logo">
+        <img src="image/cityulogo.png" alt="cityu logo">
+        <nav class="header-nav">
+            <ul>
+                <li><a href="index.html" >HOME</a></li>
+                <li><a href="adaption.html" >AI adaption</a></li>
+                <li><a href="benefit.html" >Benefits and Risks</a></li>
+                <li><a href="case.html" >Case Study</a></li>
+                <li><a href="quiz.html" >QUIZ</a></li>
+            </ul>
+        </nav>
+    </div>
+    <br>
+   
+    </header>
+    <h2>Quiz Questions</h2>
+<br>
+    <h3>
+Q1.What is the defining characteristic of synthetic identity fraud that makes it difficult for rule-based systems to detect?<br>
+<input type="radio" name ="question 1">It always uses a stolen real SSN with the correct name.<br>
+<input type="radio" name ="question 1" id="correct1">It combines real and fake data (e.g., real SSN + fake name), creating no single obvious red flag.<br>
+<input type="radio" name ="question 1">It only uses completely fake data with no connection to real identities.<br>
+<input type="radio" name ="question 1">It requires physical documents that cannot be digitized.<br>
+<br>
+Q2.Which AI mechanism is described as especially effective at detecting coordinated, low‑volume synthetic identity rings that rule‑based systems miss?<br>
+<input type="radio" name ="question 2">Simple logistic regression on application fields.<br>
+<input type="radio" name ="question 2">Rule‑based velocity checks on phone numbers.<br>
+<input type="radio" name ="question 2" id="correct2">Graph Neural Networks (GNNs) plus anomaly scoring.<br>
+<input type="radio" name ="question 2">Manual review of all applications.<br>
+<br>
+Q3.According to the material, what is a key trade‑off when deploying AI for synthetic identity fraud detection?<br>
+<input type="radio" name ="question 3">Higher detection always reduces false positives.<br>
+<input type="radio" name ="question 3" id="correct3">Balancing fraud detection accuracy with false positives and customer friction.<br>
+<input type="radio" name ="question 3">Eliminating all false positives is always possible.<br>
+<input type="radio" name ="question 3">Detection accuracy has no impact on compliance.<br>
+<br>
+Q4.How do temporal and behavioral signals in AI models help detect synthetic identity fraud?<br>
+<input type="radio" name ="question 4">They ignore timing and only check exact identifier matches.<br>
+<input type="radio" name ="question 4">They require human labeling of every time‑stamped event.<br>
+<input type="radio" name ="question 4">They rely solely on static application data like name and address.<br>
+<input type="radio" name ="question 4" id="correct4">They detect bursts of applications from the same IP within short windows and behavioral drift over time.<br>
+<br>
+Q5.What mitigation does the material suggest to address fairness and bias concerns in AI fraud models?<br>
+<input type="radio" name ="question 5">Remove all demographic data and never audit model outputs.<br>
+<input type="radio" name ="question 5">Always auto‑reject flagged applications without review.<br>
+<input type="radio" name ="question 5" id="correct5">Audit disparate false positive rates and apply threshold adjustments.<br>
+<input type="radio" name ="question 5"> Use postal code as the primary fraud indicator.<br>
+<br>
+Q6.If synthetic identity fraud is compared to a “slow‑burning fuse” rather than a sudden explosion, which AI capability is best suited to detect it before the default?<br>
+<input type="radio" name ="question 6" id="correct6">Temporal and behavioral signals that track piggybacking and sudden changes in transaction patterns.<br>
+<input type="radio" name ="question 6">Static rule that blocks any application with a mismatched zip code.<br>
+<input type="radio" name ="question 6">A single‑record check against a blacklist of known fraudulent SSNs.<br>
+<input type="radio" name ="question 6">Manual review of every application within 24 hours.<br>
+<br>
+Q7.A fraudster builds 100 synthetic identities, each using a unique combination of real SSNs (stolen from elderly people) and fake addresses, but all applications are submitted from the same public Wi‑Fi hotspot. Which graph‑based pattern would the AI detect?<br>
+<input type="radio" name ="question 7" >No pattern, because each SSN is real and addresses are different.<br>
+<input type="radio" name ="question 7" id="correct7">A dense subgraph where all 100 applications share the same IP address node, creating an anomaly in degree and clustering.<br>
+<input type="radio" name ="question 7" >A perfect star graph with the SSN as the center, which is normal behavior.<br>
+<input type="radio" name ="question 7">A chain graph indicating sequential application submissions.<br>
+<br>
+Q8.Your AI hybrid model outputs a high anomaly score for an application, but the supervised GNN gives a low fraud probability. According to the material, what is the most likely interpretation and recommended action?<br>
+<input type="radio" name ="question 8" id="correct8">The application represents a novel attack pattern not seen in labeled data; flag for human review.<br>
+<input type="radio" name ="question 8" >Ignore the anomaly score because supervised GNN is always correct.<br>
+<input type="radio" name ="question 8" >The model is broken; retrain from scratch.<br>
+<input type="radio" name ="question 8" >Automatically approve the application to reduce false positives.<br>
+<br>
+Q9.If a lender only uses XGBoost on tabular features (no graph or entity linking), which type of synthetic identity ring would it most likely miss?<br>
+<input type="radio" name ="question 9">A ring where all applications share the same known fraudulent phone number.<br>
+<input type="radio" name ="question 9" id="correct9">A ring where each application uses a unique phone, email, and IP, but all share the same real SSN indirectly linked through a common device fingerprint.<br>
+<input type="radio" name ="question 9">A ring where every applicant has the same misspelled street name.<br>
+<input type="radio" name ="question 9">A ring where all applications use the same valid driver’s license number.<br>
+<br>
+Q10.Under fair lending laws, why is it risky for an AI model to automatically deny applicants whose addresses are in a postal code with historically high synthetic fraud rates?<br>
+<input type="radio" name ="question 10">Because postal code is always inaccurate.<br>
+<input type="radio" name ="question 10">Because fraud rates never vary by postal code.<br>
+<input type="radio" name ="question 10">Because fair lending laws only prohibit discrimination based on income, not location.<br>
+<input type="radio" name ="question 10" id="correct10">Because postal code can be a proxy for race or socioeconomic status, leading to disparate impact and potential discrimination.<br>
+
+    </h3>
+    <input type="submit" name="submit" value="Submit Quiz" onClick="result()">
+    
+<div id="resultPage" style="display:none;">
+    <h2>Quiz Results</h2>
+    <p id="finalScore"></p>
+    <div id="answerList"></div>
+    
+<br>
+    <button onclick="restartQuiz()">Restart Quiz</button>
+
+</div>
+
+
+<script type="text/javascript">
+function result() {
+    const correctAnswers = {
+        1: "It combines real and fake data (e.g., real SSN + fake name), creating no single obvious red flag.",
+        2: "Graph Neural Networks (GNNs) plus anomaly scoring.",
+        3: "Balancing fraud detection accuracy with false positives and customer friction.",
+        4: "They detect bursts of applications from the same IP within short windows and behavioral drift over time.",
+        5: "Audit disparate false positive rates and apply threshold adjustments.",
+        6: "Temporal and behavioral signals that track piggybacking and sudden changes in transaction patterns.",
+        7: "A dense subgraph where all 100 applications share the same IP address node, creating an anomaly in degree and clustering.",
+        8: "The application represents a novel attack pattern not seen in labeled data; flag for human review.",
+        9: "A ring where each application uses a unique phone, email, and IP, but all share the same real SSN indirectly linked through a common device fingerprint.",
+        10: "Because postal code can be a proxy for race or socioeconomic status, leading to disparate impact and potential discrimination."
+    }
+    ;
+
+    let score = 0;
+    let output = "";
+
+    for (let i = 1; i <= 10; i++) {
+        const options = document.getElementsByName("question " + i);
+        let userAnswer = null;
+
+        for (let option of options) {
+            if (option.checked) {
+                userAnswer = option.nextSibling.textContent.trim();
+            }
+        }
+
+        if (userAnswer === correctAnswers[i]) {
+            score++;
+        }
+
+       
+const isCorrect = userAnswer === correctAnswers[i];
+
+output += `
+    <div style="margin-bottom:15px;">
+        <strong>Question ${i}</strong><br>
+        Correct Answer: ${correctAnswers[i]}<br>
+        <span class="${isCorrect ? 'correct' : 'wrong'}">
+             Your Answer: ${userAnswer ?? "null"}
+        </span><br>
+        <span class="${isCorrect ? 'correct' : 'wrong'}">
+            ${isCorrect ? " Correct" : " Wrong"}
+        </span>
+    </div>
+`;
+
+    }
+
+   
+    document.querySelector("h3").style.display = "none";
+    document.querySelector('input[type="submit"]').style.display = "none";
+
+    
+    document.getElementById("resultPage").style.display = "block";
+    document.getElementById("finalScore").innerText = `Your Score: ${score} / 10`;
+    document.getElementById("answerList").innerHTML = output;
+}
+
+function restartQuiz() {
+    location.reload();   // refreshes the page
+}
+
+</script>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS1102 Group project</title>
+    <link rel="stylesheet" href="css/style1.css">
+    </head>
+<body>
+    
+    <header class="box">
+    <div class="header-logo">
+        <img src="image/cityulogo.png" alt="cityu logo">
+        <nav class="header-nav">
+            <ul>
+                <li><a href="index.html" >HOME</a></li>
+                <li><a href="adaption.html" >AI adaption</a></li>
+                <li><a href="benefit.html" >Benefits and Risks</a></li>
+                <li><a href="case.html" >Case Study</a></li>
+                <li><a href="quiz.html" >QUIZ</a></li>
+            </ul>
+        </nav>
+    </div>
+    </header>
+    
+     <div class="title-banner">
+        <h1>CS1102 - Course Project - 2025 / 2026 Semester B</h1>
+        <h2>Topic: AI-Driven Detection of Synthetic Identity Fraud in Consumer Lending</h2>
+    </div>
+    
+    <main class="content">
+        <h2>How AI-driven detection helps synthetic identity fraud in consumer lending?</h2>
+
+        <p>AI can substantially reduce synthetic-identity fraud by linking disparate application signals into relational graphs, surfacing coordinated anomalies, and prioritizing high-risk applications for human review — a practical approach for consumer lenders in Hong Kong and globally. Graph Neural Networks (GNNs) plus anomaly scoring are especially effective at detecting coordinated, low-volume rings that rule-based systems miss.</p >
+
+        <h3>How AI helps — core mechanisms</h3>
+        <ul>
+            <li>
+                Entity linking and graph construction
+                <ul>
+                    <li>AI builds a graph of entities (applicants, SSNs, phones, emails, IPs, addresses) so relationships (shared phone, reused device) become explicit. This exposes coordinated reuse patterns that single-record rules miss.</li>
+                </ul>
+            </li>
+            <li>
+                Relational learning with GNNs
+                <ul>
+                    <li>GNNs learn structural patterns (subgraph motifs, dense sharing clusters) that correlate with synthetic identity rings; they generalize to new nodes and can operate inductively on unseen applicants.</li>
+                </ul>
+            </li>
+            <li>
+                Anomaly detection and hybrid scoring
+                <ul>
+                    <li>Unsupervised or contrastive anomaly detectors flag novel or rare subgraphs; combining anomaly scores with supervised GNN probabilities reduces missed novel attacks.</li>
+                </ul>
+            </li>
+            <li>
+                Temporal and behavioral signals
+                <ul>
+                    <li>Time-aware edges (e.g., many applications from same IP within short windows) let models detect bursts and coordinated campaigns earlier than static rules.</li>
+                </ul>
+            </li>
+        </ul>
+
+       <style>
+
+        .comparison-table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .comparison-table th {
+            background-color: #2c3e50;
+            color: white;
+            padding: 12px 15px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        .comparison-table td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+     
+    </style>
+</head>
+<body>
+
+    <h3>Quick comparison table (decision criteria)</h3>
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Approach</th>
+                <th>Strengths</th>
+                <th>Weaknesses</th>
+                <th>Best use case</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Rule-based</td>
+                <td>Fast; interpretable</td>
+                <td>Rigid; high miss rate vs novel rings</td>
+                <td>Initial screening; compliance checks</td>
+            </tr>
+            <tr>
+                <td>Feature ML<br>(XGBoost)</td>
+                <td>Good for tabular signals; fast</td>
+                <td>Misses relational rings</td>
+                <td>Scoring known patterns</td>
+            </tr>
+            <tr>
+                <td>GNN + supervised</td>
+                <td>Captures relational fraud; inductive generalization</td>
+                <td>Requires graph engineering; needs labeled seeds</td>
+                <td>Detecting coordinated synthetic rings</td>
+            </tr>
+            <tr>
+                <td>Graph anomaly + hybrid</td>
+                <td>Surfaces novel attacks; low dependence on labels</td>
+                <td>Tuning thresholds; higher analyst workload</td>
+                <td>Early detection of emerging tactics</td>
+            </tr>
+        </tbody>
+    </table>
+    </main>
+</body>
+</html>
